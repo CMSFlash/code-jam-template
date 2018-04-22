@@ -1,17 +1,14 @@
 i=0
 while :
 do
-    echo $i
-    #echo Generating inputs...
+    echo "Testing case $i"
     python3 gen.py > test.txt
 
-    #echo Running IUT...
     python3 $1 < test.txt > a.txt
     if (($? != 0))
     then
         break
     fi
-    #echo Running oracle...
     if [ $2 == "smoke" ]
     then
         cp a.txt b.txt
@@ -23,6 +20,7 @@ do
 
     if [ ! -z  "$difference" ]
     then
+        echo
         echo "Test case $i failed."
         echo $difference > diff.txt
         break
