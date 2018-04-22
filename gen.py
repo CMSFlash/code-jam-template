@@ -3,32 +3,23 @@ import random
 
 
 
-def to_str(x):
+def legalize(n):
 
-    if x:
-        result = 'x'
-    else:
-        result = 'o'
-
-    return result
+    return n
 
 
 
 
-t = 1
+L = int(1e6)
+T = 1
 
-print(t)
 
-for caseId in range(t):
 
-    r = random.randint(1, 20 + 1)
-    c = random.randint(1, 20 + 1)
-    print(r, c)
 
-    for i in range(r):
+print(T)
 
-        for j in range(c):
+for case_id in range(T):
 
-            print(to_str(random.choice([True, False])), end='')
-
-        print()
+    l = legalize(random.randint(1, L))
+    f = legalize(random.randint(1, l))
+    print(f, l)
