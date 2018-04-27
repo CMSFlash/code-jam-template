@@ -9,7 +9,7 @@ do
     then
         break
     fi
-    if [ $2 == "smoke" ]
+    if [ $2 == "organic" ]
     then
         cp a.txt b.txt
     else
