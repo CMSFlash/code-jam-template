@@ -20,6 +20,8 @@ def main():
         for i in range(n):
             x = legalize(random.randint(1, X))
             y = legalize(random.randint(1, X))
+            xs.append(x)
+            ys.append(y)
 
         print(n)
         for x, y in zip(xs, ys):
