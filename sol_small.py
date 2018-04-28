@@ -10,10 +10,15 @@ def solve():
     pass
 
 
-t = int(stdin.readline())
-for case_id in range(1, t + 1):
-    f, l = (int(word) for word in stdin.readline().split())
+def main():
+    t = int(stdin.readline())
+    for case_id in range(1, t + 1):
+        f, l = (int(word) for word in stdin.readline().split())
 
-    result = solve()
+        result = solve()
 
-    print('Case #{}: {}'.format(case_id, result))
+        print('Case #{}: {}'.format(case_id, result))
+
+
+if __name__ == '__main__':
+    main()
