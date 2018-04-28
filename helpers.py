@@ -1,5 +1,13 @@
-def print_for_debug(debug, *args, **kwargs):
+class PrintForDebug:
 
-    if debug:
 
-        print(*args, **kwargs)
+    def __init__(self, debug):
+
+        self.debug = debug
+        
+
+    def __call__(self, *args, **kwargs):
+
+        if self.debug:
+
+            print(*args, **kwargs)
