@@ -5,7 +5,7 @@ from helpers import *
 
 
 
-DEBUG = True
+print_for_debug = PrintForDebug(False)
 
 
 
