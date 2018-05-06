@@ -27,7 +27,7 @@ def solve():
 def main():
     t = int(stdin.readline())
     for case_id in range(1, t + 1):
-        f, l = (int(word) for word in stdin.readline().split())
+        x, y = (int(word) for word in stdin.readline().split())
 
         result = solve()
 
