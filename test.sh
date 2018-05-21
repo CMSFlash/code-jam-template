@@ -12,6 +12,10 @@ do
     if [ $2 == "organic" ]
     then
         cp a.txt b.txt
+    elif [ $2 == "performance" ]
+    then
+        cp a.txt b.txt
+        echo "Force termination." >> b.txt
     else
         pypy3 $2 < test.txt > b.txt
     fi
