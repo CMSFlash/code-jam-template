@@ -4,7 +4,7 @@
 from sys import stderr
 
 
-class PrintForDebug:
+class DebugPrinter:
 
     def __init__(self, debug, file=stderr):
         self.debug = debug
@@ -21,7 +21,7 @@ class PrintForDebug:
 from sys import stdin
 
 
-print_for_debug = PrintForDebug(False)
+print_for_debug = DebugPrinter(False)
 
 
 def solve():
