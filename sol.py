@@ -5,7 +5,6 @@ from sys import stderr
 
 
 class DebugPrinter:
-
     def __init__(self, debug, file=stderr):
         self.debug = debug
         self.file = file
