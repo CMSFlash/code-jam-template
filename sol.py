@@ -1,14 +1,18 @@
 # Helpers
 
 
+from sys import stderr
+
+
 class PrintForDebug:
 
-    def __init__(self, debug):
+    def __init__(self, debug, file=stderr):
         self.debug = debug
+        self.file = file
 
     def __call__(self, *args, **kwargs):
         if self.debug:
-            print(*args, **kwargs)
+            print(*args, **kwargs, file=self.file)
 
 
 # Solution
