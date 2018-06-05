@@ -17,6 +17,21 @@ class DebugPrinter:
 # Algorithms
 
 
+import heapq
+import queue
+
+
+class PriorityQueue(queue.PriorityQueue):
+    def __init__(self, initial=[], heapified=False):
+        super().__init__(maxsize=0)
+        if not heapified:
+            heapq.heapify(initial)
+        self.queue = initial
+
+    def __str__(self):
+        return str(self.queue)
+
+
 # Solution
 
 
