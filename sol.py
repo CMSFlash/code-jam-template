@@ -14,6 +14,9 @@ class DebugPrinter:
             print(*args, **kwargs, file=self.file)
 
 
+# Algorithms
+
+
 # Solution
 
 
