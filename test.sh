@@ -15,7 +15,10 @@ do
     elif [ $2 == "performance" ]
     then
         cp a.txt b.txt
-        echo "Force termination." >> b.txt
+        if ((i >= $3 - 1))
+        then
+            echo "Force termination." >> b.txt
+        fi
     else
         pypy3 $2 < test.txt > b.txt
     fi
