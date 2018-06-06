@@ -19,6 +19,13 @@ class DebugPrinter:
 
 import heapq
 import queue
+import decimal
+
+
+def round_half_up(x):
+    x = decimal.Decimal(x)
+    n = x.to_integral(rounding=decimal.ROUND_HALF_UP)
+    return n
 
 
 class PriorityQueue(queue.PriorityQueue):
