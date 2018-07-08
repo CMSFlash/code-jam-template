@@ -39,6 +39,20 @@ class PriorityQueue(queue.PriorityQueue):
         return str(self.queue)
 
 
+class MaximumKeeper:
+    def __init__(self, initial=0, label=None):
+        self.max = initial
+        self.count = 0
+        self.label = label
+
+    def update(self, value):
+        if value > self.max:
+            self.max = value
+            self.count = 1
+        elif value == self.max:
+            self.count += 1
+
+
 # Solution
 
 
